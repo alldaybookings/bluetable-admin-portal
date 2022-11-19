@@ -1,22 +1,24 @@
-import './styles/App.css';
+import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./AppRouter";
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+import Topnav from "./components/TopNav";
 
 function App() {
+  const [active, setActive] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <BrowserRouter>
+        <Topnav setActive={setActive}></Topnav>
+        <AppRouter></AppRouter>
+      </BrowserRouter>
+    </React.Fragment>
   );
 }
 
