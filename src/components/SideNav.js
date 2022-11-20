@@ -19,6 +19,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import DiningIcon from "@mui/icons-material/Dining";
 import PeopleIcon from "@mui/icons-material/People";
 import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
+import EventIcon from '@mui/icons-material/Event';
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 
@@ -43,6 +44,11 @@ export default function Sidenav(props) {
       label: "Restaurants",
       link: `/restaurants`,
       icon_component: <TableRestaurantIcon />,
+    },
+    {
+      label: "Reservations",
+      link: `/reservations`,
+      icon_component: <EventIcon />,
     },
   ];
 
@@ -84,7 +90,7 @@ export default function Sidenav(props) {
           <Box sx={{ display: "flex", padding: 2 }}>
             <Avatar sx={{ bgcolor: deepPurple[500] }}>JO</Avatar>
             <Box sx={{ marginLeft: 1 }}>
-              <Typography sx={{ fontWeight: "bold" }}>John Doe</Typography>
+              <Typography sx={{ fontWeight: "bold", fontSize: "0.9rem" }}>John Doe</Typography>
               <Typography sx={{ fontSize: "0.7rem" }}>Administrator</Typography>
             </Box>
           </Box>
