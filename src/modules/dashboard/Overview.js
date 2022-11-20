@@ -12,7 +12,7 @@ export default function Overview(props) {
   return (
     <Box
       sx={{
-        mt: { xs: 2, sm: 10 },
+        mt: { xs: 2, sm: 8 },
         ml: { xs: 2, md: props.active ? 25 : 2 },
         mr: 3,
         transition: "margin-left 0.2s",

@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 
-import {
-  AppBar,
-  Box,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -33,18 +27,18 @@ export default function Topnav(props) {
   return (
     <AppBar position="fixed">
       <Box sx={{ px: 2 }}>
-        <Toolbar disableGutters>
+        <Toolbar disableGutters variant="dense">
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 1 }}
             onClick={() => setTopNavState(!topNavState)}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography sx={{ flexGrow: 1, fontSize: 16 }}>
             BlueTable Management System
           </Typography>
           <IconButton
@@ -72,8 +66,18 @@ export default function Topnav(props) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
+            <MenuItem
+              onClick={handleClose}
+              sx={{ fontSize: "0.9rem", fontWeight: "bold" }}
+            >
+              Profile
+            </MenuItem>
+            <MenuItem
+              onClick={handleClose}
+              sx={{ fontSize: "0.9rem", fontWeight: "bold" }}
+            >
+              My Restaurant
+            </MenuItem>
           </Menu>
         </Toolbar>
       </Box>

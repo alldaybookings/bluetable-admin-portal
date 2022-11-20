@@ -60,8 +60,8 @@ function overrideTheme() {
       MuiToolbar: {
         styleOverrides: {
           dense: {
-            height: 32,
-            minHeight: 32,
+            height: 48,
+            minHeight: 48,
           },
         },
       },

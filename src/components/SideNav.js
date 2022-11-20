@@ -13,13 +13,13 @@ import {
   Divider,
   Typography,
 } from "@mui/material";
-import { deepPurple } from "@mui/material/colors";
+import { cyan } from "@mui/material/colors";
 
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import DiningIcon from "@mui/icons-material/Dining";
 import PeopleIcon from "@mui/icons-material/People";
 import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
-import EventIcon from '@mui/icons-material/Event';
+import EventIcon from "@mui/icons-material/Event";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 
@@ -74,7 +74,7 @@ export default function Sidenav(props) {
         "& .MuiPaper-root": {
           top: {
             xs: 56,
-            sm: 64,
+            sm: 50,
           },
         },
       }}
@@ -88,9 +88,11 @@ export default function Sidenav(props) {
       >
         <nav aria-label="main mailbox folders">
           <Box sx={{ display: "flex", padding: 2 }}>
-            <Avatar sx={{ bgcolor: deepPurple[500] }}>JO</Avatar>
+            <Avatar sx={{ bgcolor: cyan[500] }}>JO</Avatar>
             <Box sx={{ marginLeft: 1 }}>
-              <Typography sx={{ fontWeight: "bold", fontSize: "0.9rem" }}>John Doe</Typography>
+              <Typography sx={{ fontWeight: "bold", fontSize: "0.9rem" }}>
+                John Doe
+              </Typography>
               <Typography sx={{ fontSize: "0.7rem" }}>Administrator</Typography>
             </Box>
           </Box>
