@@ -7,11 +7,11 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
-export default function Topnav(props) {
+export default function Topnav({ setActive }) {
   const [topNavState, setTopNavState] = useState(true);
-
+  
   useEffect(() => {
-    props.setActive(topNavState);
+    setActive(topNavState);
   }, [topNavState]);
 
   const [anchorEl, setAnchorEl] = useState(null);

@@ -12,10 +12,6 @@ import "@fontsource/roboto/700.css";
 import Topnav from "./components/TopNav";
 import Sidenav from "./components/SideNav";
 
-// #fb2f2f
-// #2ffbfb
-// #acfdfd
-
 function App() {
   const theme = overrideTheme();
 
@@ -24,7 +20,7 @@ function App() {
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.REACT_APP_DEV_URL}>
           <Topnav setActive={setActive}></Topnav>
           <Sidenav active={active}></Sidenav>
           <AppRouter active={active}></AppRouter>
