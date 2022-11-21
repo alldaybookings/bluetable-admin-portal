@@ -1,12 +1,4 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
-import { cyan } from "@mui/material/colors";
-
-import DiningIcon from "@mui/icons-material/Dining";
-import PeopleIcon from "@mui/icons-material/People";
-import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
-import EventIcon from "@mui/icons-material/Event";
-
-import Widget from "../../components/Widget";
+import { Box, Paper, Typography } from "@mui/material";
 
 export default function RestaurantsList(props) {
   return (
